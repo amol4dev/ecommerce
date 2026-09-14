@@ -16,11 +16,15 @@ const AdminCategoryBanners = () => {
   const [mobilePreview, setMobilePreview] = useState(null);
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState({ type: '', text: '' });
-
-  useEffect(() => {
-    if (!user || user.role !== 'admin') { navigate('/'); return; }
-    fetchData();
-  }, [user, navigate]);
+useEffect(() => {
+  if (!user || user.role !== 'admin') { navigate('/'); return; }
+  fetchData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [user, navigate]);
+  // useEffect(() => {
+  //   if (!user || user.role !== 'admin') { navigate('/'); return; }
+  //   fetchData();
+  // }, [user, navigate]);
 
   const predefinedCategories = [
     'Rudraksha',
