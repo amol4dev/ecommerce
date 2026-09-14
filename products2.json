@@ -1,0 +1,72 @@
+[
+  {
+    "_id": "6aa45a12d444ccd0cc005337",
+    "name": "Wireless Noise-Cancelling Headphones",
+    "description": "Immersive sound experience with advanced active noise cancellation.",
+    "price": 299.99,
+    "category": "Electronics",
+    "stock": 15,
+    "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    "ratings": 4.8,
+    "numReviews": 24,
+    "__v": 0,
+    "createdAt": "2026-09-11T19:44:18.217Z",
+    "updatedAt": "2026-09-11T19:44:18.217Z"
+  },
+  {
+    "_id": "6aa45a12d444ccd0cc005338",
+    "name": "Minimalist Modern Chair",
+    "description": "A stylish and comfortable addition to any contemporary living room.",
+    "price": 150,
+    "category": "Furniture",
+    "stock": 30,
+    "imageUrl": "https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    "ratings": 4.2,
+    "numReviews": 12,
+    "__v": 0,
+    "createdAt": "2026-09-11T19:44:18.218Z",
+    "updatedAt": "2026-09-11T19:44:18.218Z"
+  },
+  {
+    "_id": "6aa45a12d444ccd0cc005339",
+    "name": "Professional DSLR Camera",
+    "description": "Capture stunning moments with high-resolution clarity and speed.",
+    "price": 1199.99,
+    "category": "Electronics",
+    "stock": 8,
+    "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    "ratings": 4.9,
+    "numReviews": 50,
+    "__v": 0,
+    "createdAt": "2026-09-11T19:44:18.218Z",
+    "updatedAt": "2026-09-11T19:44:18.218Z"
+  },
+  {
+    "_id": "6aa45a12d444ccd0cc00533a",
+    "name": "Classic White Sneakers",
+    "description": "Versatile and comfortable, a staple for any casual outfit.",
+    "price": 85,
+    "category": "Clothing",
+    "stock": 50,
+    "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    "ratings": 4.5,
+    "numReviews": 89,
+    "__v": 0,
+    "createdAt": "2026-09-11T19:44:18.218Z",
+    "updatedAt": "2026-09-11T19:44:18.218Z"
+  },
+  {
+    "_id": "6aa542627a0dbeb7a21e999f",
+    "name": "Rudraksha",
+    "description": "reterrthfghjfgyjgfy nfjtyujg ngfyjgjv ngyfjghnvcncjgyj fghtffg",
+    "price": 999,
+    "category": "Rudraksha",
+    "stock": 546,
+    "imageUrl": "https://res.cloudinary.com/hcyzfyco/image/upload/v1789215329/jlmw6f2sbqi4oxnl6bcz.jpg",
+    "ratings": 0,
+    "numReviews": 0,
+    "createdAt": "2026-09-12T12:15:30.363Z",
+    "updatedAt": "2026-09-12T12:15:30.363Z",
+    "__v": 0
+  }
+]

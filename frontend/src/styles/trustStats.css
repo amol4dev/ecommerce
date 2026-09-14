@@ -1,0 +1,146 @@
+/* ── TrustStats Container ──────────────────────────────── */
+.trust-stats-section {
+  background-color: #f6efe6; /* Warm cream/beige */
+  /* Subtle diagonal cross-hatch texture */
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(140, 127, 104, 0.03) 0, rgba(140, 127, 104, 0.03) 1px, transparent 1px, transparent 10px),
+    repeating-linear-gradient(-45deg, rgba(140, 127, 104, 0.03) 0, rgba(140, 127, 104, 0.03) 1px, transparent 1px, transparent 10px);
+  padding: 30px 20px; /* Reduced by half from 60px */
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #e8d8c8;
+  border-bottom: 1px solid #e8d8c8;
+}
+
+.trust-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  max-width: 900px; /* Kept compact but with enough room for 4 stats */
+}
+
+/* ── Stat Blocks ─────────────────────────────────────── */
+.stat-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px 10px;
+  position: relative;
+  border-radius: 12px;
+  transition: transform 0.25s ease, background 0.25s ease;
+  cursor: default;
+}
+
+.stat-block:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+/* Dividers for Desktop (3 vertical lines between the 4 blocks) */
+.stat-block:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: rgba(140, 127, 104, 0.2); /* light tan divider */
+}
+
+/* ── Typography ──────────────────────────────────────── */
+.stat-value {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.5rem; /* Reduced from 2.2rem */
+  font-weight: 700;
+  color: #3B2A1E; /* Espresso */
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-family: "Inter", "Roboto", sans-serif;
+  font-size: 0.65rem; /* Reduced from 0.75rem */
+  font-weight: 600;
+  color: #8C7F68; /* Muted gray-brown */
+  text-transform: uppercase;
+  letter-spacing: 0.12em; /* Tracking-widest */
+  max-width: 160px;
+  line-height: 1.4;
+}
+
+/* Icon specific styles */
+.star-icon {
+  color: #d4af37;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.youtube-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.youtube-icon svg {
+  width: 28px;
+  height: 20px;
+}
+
+/* ── Responsive Mobile (2x2 Grid) ────────────────────── */
+@media (max-width: 768px) {
+  .trust-stats-section {
+    padding: 40px 20px;
+  }
+
+  .trust-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+
+  /* Reset desktop dividers */
+  .stat-block:not(:last-child)::after {
+    display: none;
+  }
+
+  /* Vertical divider in the middle (between col 1 and 2) */
+  .stat-block:nth-child(odd) {
+    border-right: 1px solid rgba(140, 127, 104, 0.2);
+  }
+
+  /* Horizontal divider in the middle (between row 1 and 2) */
+  .stat-block:nth-child(1),
+  .stat-block:nth-child(2) {
+    border-bottom: 1px solid rgba(140, 127, 104, 0.2);
+    padding-bottom: 30px;
+  }
+  
+  .stat-block:nth-child(3),
+  .stat-block:nth-child(4) {
+    padding-top: 30px;
+  }
+
+  .stat-value {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-value {
+    font-size: 1.5rem;
+  }
+  
+  .youtube-icon svg {
+    width: 24px;
+    height: 17px;
+  }
+}

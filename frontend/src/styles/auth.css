@@ -1,0 +1,116 @@
+/* ═══════════════════════════════════════════════════════
+   Auth — Login / Register — Triveni Sangam Dialogues
+═══════════════════════════════════════════════════════ */
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: linear-gradient(135deg, #fdf6ef 0%, #fdf0e2 100%);
+  padding: 40px 20px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.auth-form {
+  background: #fff;
+  padding: 44px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(180,100,40,0.08), 0 16px 48px rgba(180,100,40,0.12);
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 1.5px solid #f0dcc8;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shimmer top accent */
+.auth-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #C8793A, #e8a060, transparent);
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(50%); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.auth-form h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #5a2d0c;
+  margin-bottom: 4px;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* ── Inputs ── */
+.auth-form input {
+  padding: 13px 16px;
+  background: #fffaf5;
+  border: 1.5px solid #d9b896;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #3d1f0a;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.auth-form input:hover {
+  border-color: #C8793A;
+}
+
+.auth-form input:focus {
+  border-color: #C8793A;
+  box-shadow: 0 0 0 3px rgba(200, 121, 58, 0.14);
+  background: #fff;
+}
+
+.auth-form input::placeholder { color: #b88060; }
+
+/* ── Text & Links ── */
+.auth-form p {
+  text-align: center;
+  margin-top: 4px;
+  color: #9a6a44;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.auth-form a {
+  color: #C8793A;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.auth-form a:hover {
+  color: #a85e28;
+  text-decoration: underline;
+}
+
+/* ── Button ── */
+.auth-form .btn {
+  margin-top: 4px;
+  padding: 13px;
+  font-size: 1rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 500px) {
+  .auth-form { padding: 28px 20px; }
+}

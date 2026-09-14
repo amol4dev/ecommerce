@@ -1,0 +1,138 @@
+/* ═══════════════════════════════════════════════════════
+   Footer — Triveni Sangam Dialogues
+═══════════════════════════════════════════════════════ */
+
+.footer-section {
+  background: linear-gradient(180deg, #fffaf5 0%, #fff6ee 100%);
+  border-top: 1.5px solid #f0dcc8;
+  padding: 60px 20px 24px;
+  margin-top: auto;
+  font-family: 'Lato', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #f0dcc8;
+}
+
+/* ── Brand Column ──────────────────────────────────── */
+.footer-brand { flex: 1 1 300px; }
+
+.footer-wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  margin-bottom: 16px;
+}
+
+.footer-wm-main {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  background: linear-gradient(135deg, #7a3d10 0%, #c8793a 55%, #e8a060 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-wm-sub {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #b07040;
+  opacity: 0.85;
+}
+
+.footer-tagline {
+  color: #9a6a44;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 320px;
+}
+
+/* ── Links Columns ─────────────────────────────────── */
+.footer-links-col { flex: 1 1 150px; }
+
+.footer-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  color: #5a2d0c;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background: #C8793A;
+  border-radius: 2px;
+}
+
+.footer-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer-link-list li a {
+  color: #7a3d10;
+  font-size: 0.93rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  display: inline-block;
+}
+
+.footer-link-list li a:hover {
+  color: #C8793A;
+  padding-left: 5px;
+}
+
+/* ── Bottom Bar ────────────────────────────────────── */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #9a6a44;
+  font-size: 0.88rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── Responsive ────────────────────────────────────── */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .footer-brand {
+    flex: 0 0 100%;
+    margin-bottom: 30px;
+  }
+  .footer-links-col { flex: 1 1 45%; }
+}

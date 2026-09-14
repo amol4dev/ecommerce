@@ -1,0 +1,202 @@
+.cart-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.cart-layout {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.cart-items {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Cart Item ── */
+.cart-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(180,100,40,0.06), 0 1px 3px rgba(0,0,0,0.04);
+  border: 1.5px solid #f0dcc8;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.cart-item:hover {
+  transform: translateX(4px);
+  border-color: rgba(200, 121, 58, 0.32);
+  box-shadow: 0 6px 20px rgba(180,100,40,0.10);
+}
+
+.cart-item-image {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 24px;
+  border: 1px solid #f0dcc8;
+  transition: transform 0.3s ease;
+}
+
+.cart-item:hover .cart-item-image { transform: scale(1.04); }
+
+.cart-item-details { flex: 1; }
+
+.cart-item-details h4 {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #3d1f0a;
+  line-height: 1.45;
+}
+
+/* ── Quantity Controls ── */
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 12px 0;
+}
+
+.qty-controls button {
+  background: #f5e6d3;
+  color: #7a3d10;
+  border: 1.5px solid #e8d0b0;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.qty-controls button:hover {
+  background: #C8793A;
+  border-color: #C8793A;
+  color: #fff;
+  transform: scale(1.08);
+  box-shadow: 0 3px 10px rgba(200,121,58,0.25);
+}
+
+.qty-controls button:active { transform: scale(0.95); }
+
+.qty-controls span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3d1f0a;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* ── Remove Button ── */
+.btn-remove {
+  background: rgba(239,68,68,0.07);
+  color: #c0392b;
+  border: 1px solid rgba(239,68,68,0.22);
+  padding: 7px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  font-size: 13px;
+}
+
+.btn-remove:hover {
+  background: #ef4444;
+  color: #fff;
+  border-color: #ef4444;
+  transform: scale(1.04);
+  box-shadow: 0 3px 10px rgba(239,68,68,0.25);
+}
+
+/* ── Cart Summary ── */
+.cart-summary {
+  flex: 1;
+  background: linear-gradient(145deg, #fff, #fffaf5);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(180,100,40,0.08), 0 2px 6px rgba(0,0,0,0.04);
+  border: 1.5px solid #f0dcc8;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.cart-summary h3 {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  border-bottom: 1.5px solid #f0dcc8;
+  padding-bottom: 15px;
+  color: #5a2d0c;
+}
+
+.btn-checkout {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+/* ── Checkout Page ── */
+.checkout-content {
+  background: #fff;
+  padding: 40px;
+  border-radius: 18px;
+  border: 1.5px solid #f0dcc8;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(180,100,40,0.08), 0 12px 40px rgba(180,100,40,0.08);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.shipping-form { display: flex; flex-direction: column; gap: 15px; }
+
+.shipping-form input {
+  padding: 13px 16px;
+  background: #fffaf5;
+  border: 1.5px solid #d9b896;
+  border-radius: 10px;
+  color: #3d1f0a;
+  font-size: 15px;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  line-height: 1.5;
+}
+
+.shipping-form input:hover { border-color: #C8793A; }
+
+.shipping-form input:focus {
+  border-color: #C8793A;
+  box-shadow: 0 0 0 3px rgba(200, 121, 58, 0.13);
+  background: #fff;
+}
+
+.checkout-summary {
+  margin-top: 30px;
+  border-top: 1.5px solid #f0dcc8;
+  padding-top: 20px;
+  text-align: right;
+}
+
+.checkout-summary h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #C8793A;
+}
+
+@media (max-width: 768px) {
+  .cart-layout { flex-direction: column; }
+  .checkout-content { padding: 24px 18px; }
+}

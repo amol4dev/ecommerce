@@ -1,0 +1,158 @@
+/* ═══════════════════════════════════════════════════════
+   YouTube Showcase — Triveni Sangam Dialogues
+═══════════════════════════════════════════════════════ */
+
+.yt-showcase-section {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 24px;
+}
+
+.yt-showcase-container {
+  background: #fffdf9;
+  border: 1.5px solid #e8d4b8;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow:
+    0 4px 6px rgba(180, 100, 40, 0.04),
+    0 12px 40px rgba(180, 100, 40, 0.09);
+}
+
+.yt-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.yt-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #4a1e08;
+  margin: 0 0 16px;
+}
+
+.yt-rule {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #c8793a, #e8a060);
+  border-radius: 2px;
+  margin: 0 auto 16px;
+}
+
+.yt-subheading {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.05rem;
+  color: #6b3d1e;
+  margin: 0;
+}
+
+/* ── Grid ───────────────────────────────────────────── */
+.yt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ── Card ───────────────────────────────────────────── */
+.yt-card {
+  background: #fff;
+  border: 1px solid #f0dcc8;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(180, 100, 40, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.yt-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(180, 100, 40, 0.1);
+}
+
+/* ── Thumbnail ──────────────────────────────────────── */
+.yt-thumbnail-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+}
+
+.yt-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.2s ease, transform 0.3s ease;
+}
+
+.yt-card:hover .yt-thumbnail {
+  transform: scale(1.03);
+  opacity: 0.85;
+}
+
+.yt-play-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.yt-play-icon {
+  width: 48px;
+  height: 48px;
+  color: #ff0000;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+  transition: transform 0.2s ease;
+}
+
+.yt-card:hover .yt-play-icon {
+  transform: scale(1.1);
+}
+
+/* ── Content ────────────────────────────────────────── */
+.yt-content {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.yt-watch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #e62117; /* Classic YouTube Red */
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.yt-watch-btn:hover {
+  background: #cc1810;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 900px) {
+  .yt-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .yt-grid {
+    grid-template-columns: 1fr;
+  }
+  .yt-showcase-container {
+    padding: 24px;
+  }
+  .yt-heading {
+    font-size: 1.8rem;
+  }
+}

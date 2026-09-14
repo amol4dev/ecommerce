@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+
+/* ═══════════════════════════════════════════════════════
+   DESIGN TOKENS — Triveni Sangam Dialogues
+═══════════════════════════════════════════════════════ */
+:root {
+  /* Brand Colors */
+  --color-primary:      #C8793A;
+  --color-primary-dark: #a85e28;
+  --color-primary-light:#f9ece0;
+  --color-accent:       #D4AF37;
+  --color-bg:           #FDFCF8;
+  --color-surface:      #ffffff;
+  --color-border:       #f0dcc8;
+  --color-border-mid:   #d9b896;
+
+  /* Text Colors */
+  --color-text-dark:    #3d1f0a;
+  --color-text-mid:     #5a2d0c;
+  --color-text-muted:   #9a6a44;
+  --color-text-faint:   #b07040;
+
+  /* Semantic */
+  --color-success:      #059669;
+  --color-danger:       #dc2626;
+  --color-focus:        rgba(200, 121, 58, 0.35);
+
+  /* Spacing Scale */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  40px;
+  --space-2xl: 60px;
+  --space-3xl: 80px;
+
+  /* Border Radius */
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  16px;
+  --radius-xl:  20px;
+  --radius-pill:999px;
+
+  /* Shadows */
+  --shadow-xs:  0 1px 2px rgba(0,0,0,0.04), 0 1px 4px rgba(180,100,40,0.04);
+  --shadow-sm:  0 2px 6px rgba(180,100,40,0.06), 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md:  0 4px 16px rgba(180,100,40,0.10), 0 2px 6px rgba(0,0,0,0.05);
+  --shadow-lg:  0 8px 32px rgba(180,100,40,0.12), 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-xl:  0 16px 48px rgba(180,100,40,0.14), 0 6px 20px rgba(0,0,0,0.07);
+  --shadow-hover: 0 10px 30px rgba(180,100,40,0.16), 0 4px 12px rgba(0,0,0,0.08);
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Outfit', sans-serif;
+  --font-h1: 3rem;
+  --font-h2: 2.2rem;
+  --font-h3: 1.5rem;
+  --font-body-lg: 1.05rem;
+  --font-body-sm: 0.9rem;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --line-height-body: 1.65;
+  --line-height-tight: 1.25;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.4s ease;
+}
+
+/* ── Reset & Base ──────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+}
+
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-text-dark);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: var(--line-height-body);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-base);
+}
+
+ul { list-style: none; }
+
+/* ── Shared Container ─────────────────────────────── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* ── Main Content ─────────────────────────────────── */
+.main-content {
+  min-height: 85vh;
+  padding: var(--space-xl) var(--space-lg);
+  max-width: 1400px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ── Headings ─────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.4px;
+  margin-bottom: var(--space-md);
+  line-height: var(--line-height-tight);
+}
+
+h2 {
+  font-size: var(--font-h2);
+  color: var(--color-text-mid);
+}
+
+/* ── Premium Buttons ──────────────────────────────── */
+.btn {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: #fff;
+  padding: 12px 26px;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-size: 15px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 14px rgba(200, 121, 58, 0.28);
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(200, 121, 58, 0.4);
+  filter: brightness(1.06);
+}
+
+.btn:active {
+  transform: scale(0.97) translateY(0);
+  box-shadow: 0 2px 8px rgba(200, 121, 58, 0.25);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* ── Skeleton Loader ──────────────────────────────── */
+.skeleton {
+  background: linear-gradient(90deg, #f5ede5 25%, #fffaf5 50%, #f5ede5 75%);
+  background-size: 200% 100%;
+  animation: shimmer-load 1.5s infinite;
+  border-radius: var(--radius-md);
+}
+
+@keyframes shimmer-load {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Fade In ──────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Slide Up ─────────────────────────────────────── */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out both;
+}
